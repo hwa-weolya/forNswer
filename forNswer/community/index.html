@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#11111a">
+    <meta name="description" content="NSWER와 NMIXX 멤버별 팬 이야기를 나누는 커뮤니티입니다.">
+    <title>커뮤니티 — NSWER ZONE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <script src="../assets/js/storage.js" defer></script>
+    <script src="../assets/js/member-data.js" defer></script>
+    <script src="../assets/js/community-data.js" defer></script>
+    <script src="../assets/js/auth.js" defer></script>
+    <script src="../assets/js/community.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="NSWER ZONE 홈">
+        <span class="brand-mark">N<span>✳</span></span>
+        <span>NSWER <span class="brand-light">ZONE</span></span>
+      </a>
+      <nav class="main-nav" aria-label="주요 메뉴">
+        <a href="../index.html#official">공식 링크</a>
+        <a href="../index.html#schedule" aria-label="스케줄"><span class="nav-label">스케줄</span><svg class="mobile-nav-icon" aria-hidden="true" viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="15" rx="2"></rect><path d="M7.5 3.5v4m9-4v4m-13 3h17"></path></svg></a>
+        <a href="index.html" aria-current="page" aria-label="커뮤니티"><span class="nav-label">커뮤니티</span><svg class="mobile-nav-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M20 11.5a7.5 7.5 0 0 1-7.5 7.5H7l-3.5 2v-5A7.5 7.5 0 1 1 20 11.5Z"></path></svg></a>
+      </nav>
+      <a class="header-cta" href="../index.html">홈으로 <span aria-hidden="true">↗</span></a>
+      <div class="account-control">
+        <button class="header-auth" id="auth-open" type="button">로그인</button>
+        <div class="account-session" id="account-session" hidden>
+          <span id="account-nickname"></span>
+          <span class="role-badge" id="account-role-badge" hidden>ADMIN</span>
+          <button class="logout-button" id="logout-button" type="button">로그아웃</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section community-page" id="community">
+        <div class="section-heading">
+          <div>
+            <div class="section-kicker">NSWER TOGETHER</div>
+            <h1>마음 놓고 나누는 <span>팬 이야기.</span></h1>
+            <p class="community-intro">NMIXX와 NSWER의 순간을 함께 나눠요. 서로를 존중하는 따뜻한 팬 문화를 만들어 주세요.</p>
+          </div>
+          <span class="community-status"><span class="live-dot"></span> NSWER 라운지</span>
+        </div>
+
+        <div class="admin-heading">
+          <span>전체 그룹 및 멤버별 게시판</span>
+          <button class="button button-primary form-submit" id="write-post" type="button">글쓰기 <span aria-hidden="true">＋</span></button>
+        </div>
+        <div class="community-tabs" role="tablist" aria-label="커뮤니티 게시판">
+          <button class="community-tab" role="tab" aria-selected="false" data-board="공지">공지</button>
+          <button class="community-tab active" role="tab" aria-selected="true" data-board="전체">전체</button>
+          <button class="community-tab" role="tab" aria-selected="false" data-board="Lily">Lily</button>
+          <button class="community-tab" role="tab" aria-selected="false" data-board="Haewon">Haewon</button>
+          <button class="community-tab" role="tab" aria-selected="false" data-board="Sullyoon">Sullyoon</button>
+          <button class="community-tab" role="tab" aria-selected="false" data-board="Bae">Bae</button>
+          <button class="community-tab" role="tab" aria-selected="false" data-board="Jiwoo">Jiwoo</button>
+          <button class="community-tab" role="tab" aria-selected="false" data-board="Kyujin">Kyujin</button>
+        </div>
+        <div class="topic-filters" aria-label="주제별 보기">
+          <button class="topic-filter active" type="button" aria-pressed="true" data-topic="all">all</button>
+          <button class="topic-filter" type="button" aria-pressed="false" data-topic="자유">자유</button>
+          <button class="topic-filter" type="button" aria-pressed="false" data-topic="정보">정보</button>
+          <button class="topic-filter" type="button" aria-pressed="false" data-topic="신고">신고</button>
+          <button class="topic-filter" type="button" aria-pressed="false" data-topic="공지">공지</button>
+        </div>
+        <div class="post-list" id="post-list"></div>
+        <div class="community-footer"><span>서로를 존중하는 따뜻한 팬 문화를 함께 만들어요.</span><span>Be kind, be NSWER. <b>♡</b></span></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html"><span class="brand-mark">N<span>✳</span></span><span>NSWER <span class="brand-light">ZONE</span></span></a>
+      <p>팬이 함께 만드는 비공식 팬 커뮤니티입니다.<br>NMIXX 및 JYP Entertainment와 공식적으로 연관되어 있지 않습니다.</p>
+      <a href="../index.html" class="back-top">홈으로 ↑</a>
+    </footer>
+    <dialog class="auth-modal" id="auth-modal" aria-labelledby="auth-title">
+      <div class="auth-modal-content">
+        <div class="auth-modal-heading">
+          <div><span class="section-kicker">NSWER MEMBERS</span><h2 id="auth-title">로그인</h2></div>
+          <button class="month-picker-close" id="auth-close" type="button" aria-label="닫기">×</button>
+        </div>
+        <p class="auth-notice">데모 회원 데이터로 동작합니다. 실제 계정이나 비밀번호를 입력하지 마세요.</p>
+        <div class="auth-tabs" role="tablist" aria-label="로그인 또는 회원가입">
+          <button class="auth-tab active" id="login-tab" type="button" role="tab" aria-selected="true">로그인</button>
+          <button class="auth-tab" id="signup-tab" type="button" role="tab" aria-selected="false">회원가입</button>
+        </div>
+        <form class="auth-form" id="login-form">
+          <label>이메일<input name="email" type="email" autocomplete="username" required placeholder="이메일"></label>
+          <label>비밀번호<input name="password" type="password" autocomplete="current-password" required placeholder="비밀번호"></label>
+          <div class="demo-accounts">
+            <span>테스트 계정</span>
+            <button type="button" data-demo-account="admin">관리자 계정 입력</button>
+            <button type="button" data-demo-account="member">멤버 계정 입력</button>
+          </div>
+          <button class="button button-primary auth-submit" type="submit">로그인</button>
+          <p class="auth-message" id="login-message" aria-live="polite"></p>
+        </form>
+        <form class="auth-form" id="signup-form" hidden>
+          <label>닉네임<input name="nickname" autocomplete="nickname" required maxlength="20" placeholder="커뮤니티에서 사용할 닉네임"></label>
+          <label>이메일<input name="email" type="email" autocomplete="email" required placeholder="이메일"></label>
+          <label>비밀번호<input name="password" type="password" autocomplete="new-password" minlength="8" required placeholder="8자 이상"></label>
+          <button class="button button-primary auth-submit" type="submit">가입하고 시작하기</button>
+          <p class="auth-message" id="signup-message" aria-live="polite"></p>
+        </form>
+      </div>
+    </dialog>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>

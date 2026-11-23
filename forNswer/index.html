@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#11111a">
+    <meta name="description" content="NSWER를 위한 NMIXX 팬 커뮤니티. 공식 링크와 멤버별 일정, 팬 이야기를 한곳에서 만나보세요.">
+    <title>NSWER ZONE — NMIXX 팬 커뮤니티</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/storage.js" defer></script>
+    <script src="assets/js/member-data.js" defer></script>
+    <script src="assets/js/auth.js" defer></script>
+    <script src="assets/js/home.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="NSWER ZONE 홈">
+        <span class="brand-mark">N<span>✳</span></span>
+        <span>NSWER <span class="brand-light">ZONE</span></span>
+      </a>
+      <nav class="main-nav" aria-label="주요 메뉴">
+        <a href="#official">공식 링크</a>
+        <a href="#schedule" aria-label="스케줄"><span class="nav-label">스케줄</span><svg class="mobile-nav-icon" aria-hidden="true" viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="15" rx="2"></rect><path d="M7.5 3.5v4m9-4v4m-13 3h17"></path></svg></a>
+        <a href="community/index.html" aria-label="커뮤니티"><span class="nav-label">커뮤니티</span><svg class="mobile-nav-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M20 11.5a7.5 7.5 0 0 1-7.5 7.5H7l-3.5 2v-5A7.5 7.5 0 1 1 20 11.5Z"></path></svg></a>
+      </nav>
+      <a class="header-cta" href="community/index.html">함께 이야기하기 <span aria-hidden="true">↗</span></a>
+      <div class="account-control">
+        <button class="header-auth" id="auth-open" type="button">로그인</button>
+        <div class="account-session" id="account-session" hidden>
+          <span id="account-nickname"></span>
+          <span class="role-badge" id="account-role-badge" hidden>ADMIN</span>
+          <button class="logout-button" id="logout-button" type="button">로그아웃</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-orbit orbit-one"></div>
+        <div class="hero-orbit orbit-two"></div>
+        <div class="hero-content">
+          <div class="eyebrow"><span class="live-dot"></span> NSWER의 작은 우주</div>
+          <h1><span class="hero-title-line">NMIXX와 NSWER,</span><span class="hero-title-line hero-title-accent">함께 쌓아가는 우리의 순간.</span></h1>
+          <p>NMIXX와 NSWER가 함께 만드는 공간.<br>새로운 소식부터 오늘의 설렘까지 여기서 나눠요.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#schedule">이번 주 일정 보기 <span>↓</span></a>
+            <a class="button button-ghost" href="#official">공식 채널 둘러보기 <span>↗</span></a>
+          </div>
+          <div class="hero-footnote"><span>✦</span> ALWAYS WITH NSWER</div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="hero-card card-back">
+            <div class="card-back-top"><span>NMIXX</span><strong>06</strong></div>
+            <div class="card-back-emblem">✳</div>
+            <div class="card-back-footer"><span>NSWER ZONE</span></div>
+          </div>
+          <div class="hero-card card-front">
+            <div class="photocard-topline"><span>NSWER ZONE</span><span>NMIXX · 06</span></div>
+            <div class="photocard-message">
+              <span class="photocard-label">A NOTE FOR YOU</span>
+              <strong>Dear<br>NSWER,</strong>
+              <p>Always, together.</p>
+            </div>
+            <div class="photocard-rule"></div>
+            <div class="photocard-bottom">
+              <div><span>NMIXX · NSWER</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-scroll"><span></span> SCROLL TO EXPLORE</div>
+      </section>
+
+      <section class="section official-section" id="official">
+        <div class="section-heading">
+          <div>
+            <div class="section-kicker">OFFICIAL CHANNELS</div>
+            <h2>공식 소식, <span>가장 먼저.</span></h2>
+          </div>
+          <a class="text-link" href="https://nmixx.jype.com/" target="_blank" rel="noreferrer">NMIXX 공식 홈페이지 <span>↗</span></a>
+        </div>
+        <div class="official-grid">
+          <a class="official-card" href="https://x.com/NMIXX_official" target="_blank" rel="noreferrer">
+            <span class="channel-icon icon-x">𝕏</span><span class="channel-copy"><strong>Official X</strong><small>실시간 소식과 공지</small></span><span class="external-arrow">↗</span>
+          </a>
+          <a class="official-card" href="https://www.youtube.com/@NMIXXOfficial" target="_blank" rel="noreferrer">
+            <span class="channel-icon icon-youtube">▶</span><span class="channel-copy"><strong>YouTube</strong><small>뮤직비디오와 비하인드</small></span><span class="external-arrow">↗</span>
+          </a>
+          <a class="official-card" href="https://www.instagram.com/nmixx_official/" target="_blank" rel="noreferrer">
+            <span class="channel-icon icon-instagram">◎</span><span class="channel-copy"><strong>Instagram</strong><small>오늘의 NMIXX</small></span><span class="external-arrow">↗</span>
+          </a>
+          <a class="official-card" href="https://app.fans/community/nmixx/artist" target="_blank" rel="noreferrer">
+            <span class="channel-icon icon-fans">F</span><span class="channel-copy"><strong>FANS</strong><small>NMIXX 공식 커뮤니티</small></span><span class="external-arrow">↗</span>
+          </a>
+          <a class="official-card" href="https://store.dearu.com/JYP/home?lang=ko&amp;currency=KRW" target="_blank" rel="noreferrer">
+            <span class="channel-icon icon-bubble">♡</span><span class="channel-copy"><strong>JYP bubble</strong><small>공식 bubble 웹스토어</small></span><span class="external-arrow">↗</span>
+          </a>
+        </div>
+        <p class="section-note">외부 공식 채널로 이동합니다. 각 서비스의 이용 정책을 확인해 주세요.</p>
+      </section>
+
+      <section class="section schedule-section" id="schedule">
+        <div class="section-heading">
+          <div>
+            <div class="section-kicker">WHAT'S HAPPENING</div>
+            <h2>함께 챙기는 <span>우리의 일정.</span></h2>
+          </div>
+          <button class="admin-toggle" id="admin-toggle" type="button" aria-expanded="false" hidden disabled>⚙ 관리자 미리보기</button>
+        </div>
+        <div class="admin-panel" id="admin-panel" hidden>
+          <div class="admin-intro"><strong>일정 관리 도구 미리보기</strong><span>관리자 데모 계정으로 로그인하면 사용할 수 있습니다. 일정은 이 브라우저에 저장됩니다.</span></div>
+          <form id="schedule-form" class="admin-form">
+            <h3>일정 등록</h3>
+            <label>일정 제목<input name="title" required maxlength="70" placeholder="예: 공식 콘텐츠 공개"></label>
+            <div class="form-row">
+              <label>날짜<input name="date" type="date" required></label>
+              <label>시간<input name="time" type="time"></label>
+            </div>
+            <div class="form-row">
+              <label>대상<select name="member"><option value="NMIXX">그룹 전체</option><option>Lily</option><option>Haewon</option><option>Sullyoon</option><option>Bae</option><option>Jiwoo</option><option>Kyujin</option></select></label>
+              <label>종류<select name="type"><option>공식 일정</option><option>콘텐츠</option><option>방송</option><option>기타</option></select></label>
+            </div>
+            <button class="button button-primary form-submit" type="submit">일정 등록하기</button>
+          </form>
+        </div>
+        <div class="schedule-layout">
+          <div class="calendar-card">
+            <div class="calendar-top">
+              <div>
+                <span class="calendar-label">NSWER CALENDAR</span>
+                <button class="calendar-month-button" id="calendar-month" type="button" aria-haspopup="dialog" aria-controls="month-picker"><span id="calendar-month-label">2026년 11월</span><span class="calendar-month-chevron" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></span></button>
+              </div>
+              <div class="calendar-controls"><button id="prev-month" type="button" aria-label="이전 달">‹</button><button id="next-month" type="button" aria-label="다음 달">›</button></div>
+            </div>
+            <dialog class="month-picker" id="month-picker" aria-labelledby="month-picker-title">
+              <form class="month-picker-form" id="month-picker-form">
+                <div class="month-picker-heading">
+                  <h3 id="month-picker-title">달력 날짜 이동</h3>
+                  <button class="month-picker-close" id="month-picker-close" type="button" aria-label="닫기">×</button>
+                </div>
+                <div class="month-picker-fields">
+                  <label>연도<input id="picker-year" name="year" type="number" min="1900" max="2100" required></label>
+                  <label>월<select id="picker-month" name="month" required></select></label>
+                </div>
+                <button class="button button-primary form-submit" type="submit">이 달로 이동</button>
+              </form>
+            </dialog>
+            <div class="calendar-grid" id="calendar-grid" aria-label="월간 일정 달력"></div>
+            <div class="calendar-legend"><span><i class="legend-dot dot-group"></i>그룹</span><span><i class="legend-dot dot-member"></i>멤버</span></div>
+          </div>
+          <div class="event-card" hidden>
+            <div class="event-heading"><div><span class="calendar-label">UPCOMING</span><h3 id="event-date-title">다가오는 일정</h3></div><span class="event-count" id="event-count">0 EVENTS</span></div>
+            <div id="event-list" class="event-list"></div>
+            <div class="event-disclaimer">일정은 팬 커뮤니티 정보 공유용이며, 방문 전 공식 채널에서 최신 내용을 확인해 주세요.</div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="#home"><span class="brand-mark">N<span>✳</span></span><span>NSWER <span class="brand-light">ZONE</span></span></a>
+      <p>팬이 함께 만드는 비공식 팬 커뮤니티입니다.<br>NMIXX 및 JYP Entertainment와 공식적으로 연관되어 있지 않습니다.</p>
+      <a href="#home" class="back-top">BACK TO TOP ↑</a>
+    </footer>
+    <dialog class="auth-modal" id="auth-modal" aria-labelledby="auth-title">
+      <div class="auth-modal-content">
+        <div class="auth-modal-heading">
+          <div><span class="section-kicker">NSWER MEMBERS</span><h2 id="auth-title">로그인</h2></div>
+          <button class="month-picker-close" id="auth-close" type="button" aria-label="닫기">×</button>
+        </div>
+        <p class="auth-notice">데모 회원 데이터로 동작합니다. 실제 계정이나 비밀번호를 입력하지 마세요.</p>
+        <div class="auth-tabs" role="tablist" aria-label="로그인 또는 회원가입">
+          <button class="auth-tab active" id="login-tab" type="button" role="tab" aria-selected="true">로그인</button>
+          <button class="auth-tab" id="signup-tab" type="button" role="tab" aria-selected="false">회원가입</button>
+        </div>
+        <form class="auth-form" id="login-form">
+          <label>이메일<input name="email" type="email" autocomplete="username" required placeholder="이메일"></label>
+          <label>비밀번호<input name="password" type="password" autocomplete="current-password" required placeholder="비밀번호"></label>
+          <div class="demo-accounts">
+            <span>테스트 계정</span>
+            <button type="button" data-demo-account="admin">관리자 계정 입력</button>
+            <button type="button" data-demo-account="member">멤버 계정 입력</button>
+          </div>
+          <button class="button button-primary auth-submit" type="submit">로그인</button>
+          <p class="auth-message" id="login-message" aria-live="polite"></p>
+        </form>
+        <form class="auth-form" id="signup-form" hidden>
+          <label>닉네임<input name="nickname" autocomplete="nickname" required maxlength="20" placeholder="커뮤니티에서 사용할 닉네임"></label>
+          <label>이메일<input name="email" type="email" autocomplete="email" required placeholder="이메일"></label>
+          <label>비밀번호<input name="password" type="password" autocomplete="new-password" minlength="8" required placeholder="8자 이상"></label>
+          <button class="button button-primary auth-submit" type="submit">가입하고 시작하기</button>
+          <p class="auth-message" id="signup-message" aria-live="polite"></p>
+        </form>
+      </div>
+    </dialog>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
